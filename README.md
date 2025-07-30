@@ -1,21 +1,21 @@
-# 🔄 Temporal Spring Boot Kickstart
+st# Temporal Spring Boot Kickstart
 
 A complete Spring Boot application demonstrating best practices for integrating [Temporal](https://temporal.io/) workflows with Spring Boot using the official `temporal-spring-boot-starter` auto-configuration.
 
 This project showcases the **most "Spring Boot" way** to build Temporal applications, leveraging auto-discovery, auto-configuration, and Spring Boot conventions.
 
-## ✨ Features
+## Features
 
-- 🚀 **Full Spring Boot Auto-Configuration** - Zero manual bean configuration
-- 🔍 **Auto-Discovery** - Workflows and activities discovered automatically  
-- 🎯 **Annotation-Driven** - Using `@WorkflowImpl` and `@ActivityImpl`
-- 🌐 **Web GUI** - Built-in web interface for testing workflows
-- 🛡️ **Exception Handling** - Centralized error handling with `@ControllerAdvice`
-- 📊 **REST API** - Complete API for workflow execution and monitoring
-- ⚡ **Constructor Injection** - Following Spring Boot best practices
-- 🧪 **Ready for Testing** - Includes testing framework setup
+- **Full Spring Boot Auto-Configuration** - Zero manual bean configuration
+- **Auto-Discovery** - Workflows and activities discovered automatically  
+- **Annotation-Driven** - Using `@WorkflowImpl` and `@ActivityImpl`
+- **Web GUI** - Built-in web interface for testing workflows
+- **Exception Handling** - Centralized error handling with `@ControllerAdvice`
+- **REST API** - Complete API for workflow execution and monitoring
+- **Constructor Injection** - Following Spring Boot best practices
+- **Ready for Testing** - Includes testing framework setup
 
-## 🏁 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -62,7 +62,7 @@ curl -X POST http://localhost:8081/api/workflow/execute-async \
 curl http://localhost:8081/api/workflow/result/YOUR_WORKFLOW_ID
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ### Project Structure
 
@@ -99,7 +99,7 @@ src/
 - **REST API**: Programmatic access to workflow operations
 - **Exception Handling**: Proper error responses and logging
 
-## ⚙️ Configuration
+## Configuration
 
 The application uses Spring Boot's auto-configuration with minimal setup:
 
@@ -159,7 +159,7 @@ spring:
       enabled: true
 ```
 
-## 📋 API Reference
+## API Reference
 
 ### REST Endpoints
 
@@ -185,7 +185,7 @@ Access the web interface at `http://localhost:8081` for:
 - Result lookup by workflow ID
 - Running workflows tracking
 
-## 🧪 Development
+## Development
 
 ### Key Annotations
 
@@ -206,12 +206,12 @@ public class ExampleActivityImpl implements ExampleActivity {
 
 ### Spring Boot Best Practices
 
-- ✅ Constructor injection instead of `@Autowired` fields
-- ✅ `@ControllerAdvice` for exception handling
-- ✅ Configuration properties with `@ConfigurationProperties`
-- ✅ Auto-configuration over manual bean creation
-- ✅ Proper logging and error handling
-- ✅ Input validation
+- Constructor injection instead of `@Autowired` fields
+- `@ControllerAdvice` for exception handling
+- Configuration properties with `@ConfigurationProperties`
+- Auto-configuration over manual bean creation
+- Proper logging and error handling
+- Input validation
 
 ### Adding New Workflows
 
@@ -226,7 +226,7 @@ public class ExampleActivityImpl implements ExampleActivity {
 2. Create implementation with `@Component` and `@ActivityImpl(taskQueues = "your-queue")`
 3. Activities are auto-discovered and registered automatically
 
-## 🚀 Deployment
+## Deployment
 
 ### Building
 
@@ -249,14 +249,14 @@ EXPOSE 8081
 ENTRYPOINT ["java", "-jar", "/app.jar"]
 ```
 
-## 📚 Learn More
+## Learn More
 
 - [Temporal Documentation](https://docs.temporal.io/)
 - [Temporal Java SDK](https://docs.temporal.io/dev-guide/java)
 - [Temporal Spring Boot Auto-Configure](https://github.com/temporalio/sdk-java/tree/master/temporal-spring-boot-autoconfigure)
 - [Spring Boot Documentation](https://spring.io/projects/spring-boot)
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -264,11 +264,11 @@ ENTRYPOINT ["java", "-jar", "/app.jar"]
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
