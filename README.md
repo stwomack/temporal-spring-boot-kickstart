@@ -1,4 +1,4 @@
-st# Temporal Spring Boot Kickstart
+# Temporal Spring Boot Kickstart
 
 A complete Spring Boot application demonstrating best practices for integrating [Temporal](https://temporal.io/) workflows with Spring Boot using the official `temporal-spring-boot-starter` auto-configuration.
 
