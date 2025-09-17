@@ -14,11 +14,9 @@ public class TemporalConfiguration {
 
     @Bean
     public WorkflowClientOptions workflowClientOptions() {
-        // Configure OpenTracing for Temporal
         Tracer shim = OpenTracingShim.createTracerShim(GlobalOpenTelemetry.get());
         GlobalTracer.registerIfAbsent(shim);
 
-        // Configure and return WorkflowClientOptions
         return WorkflowClientOptions.newBuilder()
                 .setInterceptors(new OpenTracingClientInterceptor())
                 .build();
