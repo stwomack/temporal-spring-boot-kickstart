@@ -43,14 +43,12 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- Temporal Spring Boot Starter (Official) -->
         <dependency>
             <groupId>io.temporal</groupId>
             <artifactId>temporal-spring-boot-starter</artifactId>
             <version>${temporal.version}</version>
         </dependency>
 
-        <!-- OpenTelemetry Spring Boot Starter -->
         <dependency>
             <groupId>io.opentelemetry.instrumentation</groupId>
             <artifactId>opentelemetry-spring-boot-starter</artifactId>
@@ -72,16 +70,14 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <dependency>
             <groupId>io.opentracing</groupId>
             <artifactId>opentracing-util</artifactId>
-            <version>0.33.0</version> <!-- Use the latest stable version -->
+            <version>0.33.0</version>
         </dependency>
 
-        <!-- Micrometer for metrics -->
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
 
-        <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
