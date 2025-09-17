@@ -28,14 +28,6 @@ management:
   endpoint:
     health:
       show-details: always
-  metrics:
-    export:
-      prometheus:
-        enabled: true
-  opentelemetry:
-    resource-attributes:
-      service.name: temporal-sandbox
-      service.namespace: default
 
 opentelemetry:
   sdk:
