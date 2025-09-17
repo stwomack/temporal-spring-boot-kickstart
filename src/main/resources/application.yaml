@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: temporal-sandbox
   temporal:
     connection:
       target: 127.0.0.1:7233
@@ -14,6 +16,7 @@ logging:
   level:
     io.temporal: DEBUG
     com.example: DEBUG
+    io.opentelemetry: DEBUG
   pattern:
     console: "%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
 
@@ -21,7 +24,23 @@ management:
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health,info,metrics,prometheus
   endpoint:
     health:
       show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+  opentelemetry:
+    resource-attributes:
+      service.name: temporal-sandbox
+      service.namespace: default
+
+opentelemetry:
+  sdk:
+    service:
+      name: temporal-sandbox
+  traces:
+    exporter: otlp
+    endpoint: http://localhost:4317

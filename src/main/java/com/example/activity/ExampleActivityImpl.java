@@ -15,7 +15,6 @@ public class ExampleActivityImpl implements ExampleActivity {
     public String processData(String data) {
         logger.info("Processing data: {}", data);
 
-        // Simulate processing
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

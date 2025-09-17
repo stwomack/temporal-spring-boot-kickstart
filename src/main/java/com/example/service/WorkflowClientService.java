@@ -2,12 +2,13 @@ package com.example.service;
 
 import com.example.exception.WorkflowExecutionException;
 import com.example.workflow.ExampleWorkflow;
+
 import io.temporal.client.WorkflowClient;
 import io.temporal.client.WorkflowOptions;
 import io.temporal.client.WorkflowStub;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.Duration;
@@ -33,6 +34,7 @@ public class WorkflowClientService {
         logger.info("Starting workflow execution with input: {}", input);
 
         try {
+
             ExampleWorkflow workflow = workflowClient.newWorkflowStub(
                     ExampleWorkflow.class,
                     WorkflowOptions.newBuilder()

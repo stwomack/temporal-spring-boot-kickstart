@@ -27,7 +27,6 @@ public class ExampleWorkflowImpl implements ExampleWorkflow {
 
         String processed = activity.processData(input);
 
-        // Simulate some workflow logic
         Workflow.sleep(Duration.ofSeconds(2));
 
         activity.logMessage("Workflow completed");
