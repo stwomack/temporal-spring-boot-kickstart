@@ -1,4 +1,12 @@
 spring:
+  application:
+    name: temporal-spring-demo
+  # Change this section for Micrometer Tracing
+  tracing:
+    otel:
+      exporter:
+        zipkin:
+          endpoint: http://localhost:9411/api/v2/spans
   temporal:
     connection:
       target: 127.0.0.1:7233
@@ -14,14 +22,23 @@ logging:
   level:
     io.temporal: DEBUG
     com.example: DEBUG
+    # Add these for tracing debugging
+    io.micrometer.tracing: DEBUG
+    io.opentelemetry: DEBUG
+    org.springframework.boot.actuate.tracing: DEBUG
+    # This will show you if traces are being created
+    root: INFO
   pattern:
     console: "%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
 
 management:
+  tracing:
+    sampling:
+      probability: 1.0  # Sample 100% for testing
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health,info,metrics
   endpoint:
     health:
       show-details: always
