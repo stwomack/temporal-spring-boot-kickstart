@@ -55,12 +55,6 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <version>1.32.0-alpha</version>
         </dependency>
 
-        <!-- OpenTelemetry OpenTracing Shim -->
-<!--        <dependency>-->
-<!--            <groupId>io.opentelemetry</groupId>-->
-<!--            <artifactId>opentelemetry-opentracing-shim</artifactId>-->
-<!--            <version>${opentelemetry.version}</version>-->
-<!--        </dependency>-->
         <!-- Temporal OpenTracing Integration -->
         <dependency>
             <groupId>io.temporal</groupId>
