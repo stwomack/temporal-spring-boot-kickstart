@@ -10,7 +10,7 @@ scrape_configs:
       - targets: ['localhost:9464']
   - job_name: 'temporal-spring-boot'
     static_configs:
-      - targets: ['localhost:8081']
+      - targets: ['localhost:8085']
     metrics_path: '/actuator/prometheus'
     scrape_interval: 15s
     metric_relabel_configs:
